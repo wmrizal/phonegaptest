@@ -71,7 +71,8 @@
 	}
 	.input-group input[type="radio"]{
 		width:unset;
-		padding-top:20px;
+		margin: -1px 0;
+		vertical-align: middle;
 	}
 	.input-group textarea{
 		width:98%;
@@ -85,4 +86,8 @@
 		background-color:white;
 		padding:0px 10px;
 		border-radius: 5px;
+	}
+	.label{
+		padding-bottom:0px;
+		margin-bottom:0px;
 	}

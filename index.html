@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+
+    <!-- Your app title -->
+    <title>SIRIM</title>
+
+    <!-- This template defaults to the iOS CSS theme. To support both iOS and material design themes, see the Framework7 Tutorial at the link below:
+        http://www.idangero.us/framework7/tutorials/maintain-both-ios-and-material-themes-in-single-app.html
+     -->
+
+    <link rel="stylesheet" href="lib/framework7/css/framework7.ios.min.css">
+    <link rel="stylesheet" href="lib/framework7/css/framework7.ios.colors.min.css">
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <!-- Status bar overlay for full screen mode (PhoneGap) -->
+    <div class="statusbar-overlay"></div>
+
+    <!-- Panels overlay-->
+    <div class="panel-overlay"></div>
+    <!-- Left panel with reveal effect-->
+    <div class="panel panel-left panel-reveal">
+        <div class="content-block">
+            <p>Left panel content goes here</p>
+        </div>
+    </div>
+
+    <!-- Views -->
+    <div class="views">
+        <!-- Your main view, should have "view-main" class -->
+        <div class="view view-main">
+            <!-- Top Navbar-->
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <!-- We need cool sliding animation on title element, so we have additional "sliding" class -->
+                    <div class="center sliding">Home</div>
+                    <div class="right">
+                        <!--
+                          Right link contains only icon - additional "icon-only" class
+                          Additional "open-panel" class tells app to open panel when we click on this link
+                        -->
+                        <a href="#" class="link icon-only open-panel"><i class="icon icon-bars"></i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- Pages container, because we use fixed-through navbar and toolbar, it has additional appropriate classes-->
+            <div class="pages navbar-through toolbar-through">
+                <!-- Page, "data-page" contains page name -->
+                <div data-page="index" class="page">
+                    <!-- Scrollable page content -->
+                    <div class="page-content">
+                        <div class="content-block" >
+							<div style="padding-bottom:10px;height:100px">
+							<img src="img/SIRIM_STV.jpg" style="float:left;max-width:100%;max-height:100%;margin-right:10px;">
+							<div style="size:18px;font-weight:bold;padding-bottom:10px;padding-top:5px;">SIRIM Tech Venture Sdn Bhd<br/>(379894-W)</div><span>Lot 13, Jalan Pahat 16/8ASection 16, 40200 Shah AlamSelangor Darul Ehsan</span>
+							</div>
+							
+							<div data-pagination=".swiper-pagination" data-space-between="10" class="swiper-container swiper-init demo-swiper">
+							  <div class="swiper-wrapper">
+								<div class="swiper-slide"><img src="img/img4.png" style="width:100%"></div>
+								<div class="swiper-slide"><img src="img/img1.png" style="width:100%"></div>
+								<div class="swiper-slide"><img src="img/img_mountains_wide.jpg" style="width:100%"></div>
+								<div class="swiper-slide"><img src="img/img_fjords_wide.jpg" style="width:100%"></div>
+								<div class="swiper-slide"><img src="img/img_nature_wide.jpg" style="width:100%"></div>
+							  </div>
+							  <div class="swiper-pagination"></div>
+							</div>
+							
+                            <div class="row" style="margin-top:5%">
+								<!-- Each "cell" has col-[widht in percents] class -->
+								
+								<div onclick="pressure_vessel.html;" class="col-mid col-33"><a class="link" href="pressure_vessel.html"><img src="img/pressure_vessel.jpg" class="imagecrop">
+								PRESSURE VESSEL TECHNOLOGY & TESTING</a></div>
+								<div onclick="gotolink(2);" class="col-mid col-33"><img src="img/commerce.jpg" class="imagecrop">
+								COMMERCIAL-<br/>ISATION</div>
+								<div onclick="gotolink(3);" class="col-mid col-33"><img src="img/tech_docket.jpg" class="imagecrop">
+								TECHNOLOGY DOCKET</div>
+							</div>
+							<div style="margin-top:15px;">
+							SIRIM Tech Venture Sdn Bhd (STV), as a 100% wholly-owned subsidiary of SIRIM Berhad, was established since Sept 2014 to undertake technology commercialisation from technologies generated through SIRIM Berhad and also from external sources such as universities, IP owners and private companies. 
+
+							</div>
+                            <!-- Link to another page -->
+							<!--
+							<a href="about.html">About app</a>
+							-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Bottom Toolbar-->
+			
+            <div class="toolbar">
+                <div class="toolbar-inner">
+                    <!-- Toolbar links -->
+                    
+					<a href="contact.html" class="link">Contact Us</a>
+					<a href="#" class="link">Me</a>
+					
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="lib/framework7/js/framework7.min.js"></script>
+    <script type="text/javascript" src="js/my-app.js"></script>
+	<script> 
+	function gotolink(x){
+		switch(x){
+			case 1:window.location.replace("pressure_vessel.html");
+			break;
+			case 2:
+			break;
+			case 3:
+			break;
+			default:break;
+			
+		}
+	}
+	</script>
+
+	
+</body>
+
+</html>

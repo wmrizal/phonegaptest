@@ -1,0 +1,88 @@
+/*
+   statusbar-overlay sets the background color for the overlay. Black text is the default when the statusbar plugin is not added. When the
+   statusbar plugin is added, it also adds default setting to make the content white via:
+
+       <preference name="StatusBarStyle" value="lightcontent"/>
+
+   Setting the background color to black will allow the default light content (white text/icons) to show on it. The statusbar plugin is included
+   in the config.xml file and will be added by the CLI when you build locally.
+
+   See https://github.com/apache/cordova-plugin-statusbar
+*/
+
+.statusbar-overlay {
+    background: #000000;
+}
+
+    .swiper-container {
+      width: 100%;
+      height: 100%;
+	  background-color:gray;
+    }
+	.swiper-wrapper {
+	  align-items: center; /* add this will all relevant prefixes */
+	}
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+    }
+	.col-mid{
+		text-align: center;
+		background-color:white;
+		border-radius: 15px;
+		height:100%;
+		border-style: solid;
+		border-width: 2px;
+	}
+	.col-mid:hover{
+		filter: brightness(110%);
+	}
+	
+	.imagecrop{
+		width:100%;
+		height:70px;
+		border-radius: 11px 11px 5px 5px;
+		
+	}
+	.input-group{
+		background-color:#ffc019;
+		margin:10px;
+		padding: 5px;
+		border-style: solid;
+		border-width: 1px;
+		border-radius: 5px;
+	}
+	.input-group input{
+		width:98%;
+	}
+	.input-group input[type="radio"]{
+		width:unset;
+		padding-top:20px;
+	}
+	.input-group textarea{
+		width:98%;
+	}
+	.inputlabel{
+		font-weight:bold;
+		color:#153e4d;
+	}
+	
+	.radiolabel{
+		background-color:white;
+		padding:0px 10px;
+		border-radius: 5px;
+	}
